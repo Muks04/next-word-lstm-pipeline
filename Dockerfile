@@ -1,5 +1,5 @@
 # Force linux/amd64 platform — required for tensorflow-cpu on Apple Silicon
-FROM --platform=linux/amd64 python:3.10-slim
+FROM --platform=linux/amd64 public.ecr.aws/docker/library/python:3.10-slim
 
 WORKDIR /app
 
