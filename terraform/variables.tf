@@ -16,8 +16,7 @@ variable "github_repo" {
   default     = "next-word-prediction-lstm"
 }
 
-variable "deploy_lambda" {
-  description = "Set to true only after pushing Lambda image to ECR"
-  type        = bool
-  default     = false
+variable "github_branch" {
+  description = "GitHub branch to trigger pipeline"
+  default     = "main"
 }

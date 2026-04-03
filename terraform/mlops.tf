@@ -143,7 +143,7 @@ resource "aws_codepipeline" "mlops" {
       configuration = {
         ConnectionArn    = aws_codestarconnections_connection.github.arn
         FullRepositoryId = "${var.github_owner}/${var.github_repo}"
-        BranchName       = "main"
+        BranchName       = var.github_branch
       }
     }
   }
