@@ -19,4 +19,5 @@ EXPOSE 8501
 
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health || exit 1
 
-CMD ["streamlit", "run", "app1.py", "--server.port=8080", "--server.address=0.0.0.0", "--server.headless=true"]
+# Fix port to match Task Definition (8501)
+CMD ["streamlit", "run", "app1.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
