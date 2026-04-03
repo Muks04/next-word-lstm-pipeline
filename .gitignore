@@ -1,0 +1,31 @@
+# Model files (too large for GitHub, store on S3/HuggingFace)
+*.h5
+*.keras
+*.pickle
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# Terraform state (contains sensitive data)
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+nohup.out

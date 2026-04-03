@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - MODEL_SOURCE=local                         # set to "s3" when deploying to AWS
+      - S3_BUCKET=${S3_BUCKET:-your-bucket-name}
+      - MODEL_KEY=${MODEL_KEY:-models/next_word_lstm_model_with_early_stopping.h5}
+      - TOKENIZER_KEY=${TOKENIZER_KEY:-models/tokenizer.pickle}
+    volumes:
+      - ./next_word_lstm_model_with_early_stopping.h5:/app/next_word_lstm_model_with_early_stopping.h5
+      - ./tokenizer.pickle:/app/tokenizer.pickle
